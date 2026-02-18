@@ -1,9 +1,10 @@
-import express, { Response } from 'express'
+import express from 'express'
+import { Request, Response } from 'express'
 
 const app = express()
 
-app.get('/', (res: Response) => {
-  res.send('Redis lab running!')
+app.get('/', (req: Request, res: Response) => {
+  return res.status(200).json('Redis lab running!')
 })
 
 app.listen(3000, () => {
