@@ -1,11 +1,9 @@
 import express from 'express'
-import { Request, Response } from 'express'
+import { getPostsController } from './app/controller'
 
 const app = express()
 
-app.get('/', (req: Request, res: Response) => {
-  return res.status(200).json('Redis lab running!')
-})
+app.get('/', getPostsController)
 
 app.listen(3000, () => {
   console.log('App is running on port 3000')
