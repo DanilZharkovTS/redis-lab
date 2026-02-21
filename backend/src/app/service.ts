@@ -2,7 +2,7 @@ import { redisClient } from '../lib/redisClient'
 import storagePosts from '../lib/storage'
 
 export const getPostsService = async () => {
-  console.log('SERVICE HIT')
+  console.log('----SERVICE HIT')
 
   const redisPosts = await redisClient.get('posts')
 
